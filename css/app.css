@@ -1,0 +1,121 @@
+@import "normalize.css";
+img{
+    max-width: 100%;
+}
+a{
+    text-decoration: none;
+    color: #1a73e8;
+}
+body{
+    font-family: 'Karla', sans-serif;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    color: #313131;
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0 2rem 0 0
+}
+li{
+    padding: .5rem .75rem;
+    display: flex;
+    align-items: center;
+    color: #999;
+}
+li.active{
+    background: rgba(66,133,244,0.149);
+    border-radius: 0 20px 20px 0;
+    color: #1a73e8
+}
+li:hover{
+    cursor: pointer;
+}
+li svg{
+    margin-right: .5rem;
+    fill: currentColor;
+}
+#app{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 100%;
+    width: 100%;
+}
+#menu{
+    flex: calc(12% - 1px);
+    border-right: 1px solid rgba(0, 0, 0, .1);
+}
+#sidebar{
+    position: fixed;
+    top: 5rem;
+}
+#main{
+    flex: 88%;
+}
+#news-list{
+    display: grid;
+    grid-template-columns: auto;
+}
+#news-list article{
+    overflow: hidden;
+    border-radius: 4px;
+    padding: 0 0 1rem 0;
+    margin: .5rem;
+    background: #fff;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .1)
+}
+#news-list article div{
+    padding-top: 56.25%;
+    background-position: center;
+    background-size: cover
+}
+#news-list article header{
+    padding: 1rem;
+}
+#news-list article p{
+    padding: 0 1rem 1rem;
+    margin: 0;
+}
+#news-list article time{
+    padding: 1rem;
+    font-size: 12px;
+    color: #202124;
+    opacity: .7;
+}
+#main header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 18px 16px;
+}
+#main header h3{
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    text-transform: capitalize;
+}
+#container{
+    overflow-x: hidden;
+    box-shadow: inset 0px 4px 8px -3px rgba(17, 17, 17, .06)
+}
+#container{
+    padding: .75rem 1rem;
+}
+h3{
+    text-transform: uppercase;
+    padding-bottom: 1rem;
+    margin-top: 0;
+}
+
+@media screen and (min-width: 401px) {
+    #news-list{
+        grid-template-columns: auto auto auto auto;
+    }
+}
