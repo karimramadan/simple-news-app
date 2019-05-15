@@ -47,7 +47,7 @@ let header = document.querySelector("#main h3");
 container.addEventListener('click', function(event){
     document.querySelectorAll('#sidebar li').forEach(function(li){
         li.className = "";
-    })
+    });
     if( event.path[0].localName === "li" ){
         event.target.className = "active";
         header.innerHTML = event.target.id;
