@@ -71,7 +71,8 @@ li svg{
 }
 #news-list article div{
     padding-top: 56.25%;
-    background-size: cover
+    background-size: cover;
+    background-color: #313131;
 }
 #news-list article header{
     padding: 1rem;
