@@ -2,13 +2,12 @@ let view = {
     displaySubCategory: function( category ){
         let container = document.getElementById("news-list");
         container.innerHTML = "";
-        let url = 'https://newsapi.org/v2/top-headlines?' + 'country=us&category=' + category + '&apiKey=8b1a6b42c15d4aa09dd87eba4c467616';
-        let req = new Request(url);
-        fetch(req)
-        .then(function(response) {
+        let url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=8b1a6b42c15d4aa09dd87eba4c467616`;
+        fetch(url)
+        .then((response) => {
             return response.json();
         })
-        .then(function(jsonData){
+        .then((jsonData) => {
             jsonData.articles.forEach(element => {
                 let newsItemDiv = document.createElement("article");
                 let newsItemImg = document.createElement("div");
@@ -41,7 +40,7 @@ let view = {
         });
     }
 }
-
+// sidebar
 let container = document.getElementById("sidebar");
 let header = document.querySelector("#main h3");
 container.addEventListener('click', function(event){
