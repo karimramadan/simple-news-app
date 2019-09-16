@@ -1,2 +1,2 @@
-# simple-news-app
-Simple news app made with java script and newsapi.org
+# simple news app
+A simple news app made with vanilla java script and newsapi.org
